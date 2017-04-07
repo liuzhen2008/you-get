@@ -737,7 +737,7 @@ class DummyProgressBar:
 def get_output_filename(urls, title, ext, output_dir, merge):
     # lame hack for the --output-filename option
     global output_filename
-    if output_filename: return output_filename + ext
+    if output_filename: return '%s.%s' % (output_filename, ext);
 
     merged_ext = ext
     if (len(urls) > 1) and merge:
